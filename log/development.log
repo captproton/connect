@@ -1,0 +1,529 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRegistrations (20090204224420)
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "move_date" date, "first_name" text, "last_name" text, "home_phone" text, "email" text, "move_size_id" integer, "move_from_zip" integer, "move_to_city" text, "move_to_state" text, "special_instructions" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090204224420')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("registrations")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRegistrations (20090204224420)
+  [4;36;1mSQL (3.4ms)[0m   [0;1mDROP TABLE "registrations"[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090204224420'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRegistrations (20090204224420)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "move_date" date, "first_name" text, "last_name" text, "home_phone" text, "email" text, "move_size_id" integer, "move_from_zip" integer, "move_to_city" text, "move_to_state" text, "special_instructions" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090204224420')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("registrations")[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 14:59:31) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 172ms (View: 164, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:00:38) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:02:15) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-02-04 15:03:01) [POST]
+  Parameters: {"imgContinue.x"=>"180", "registration"=>{"special_instructions"=>"careful now", "move_size_id"=>"3", "move_to_state"=>"CA", "move_to_city"=>"san jose", "move_date(1i)"=>"2009", "move_date(2i)"=>"2", "home_phone"=>"1234567890", "move_date(3i)"=>"4", "move_from_zip"=>"94044", "first_name"=>"hot", "last_name"=>"rod", "email"=>"32@me.com"}, "imgContinue.y"=>"14", "authenticity_token"=>"f267b537684c1575bc725af440537f7e827aea47"}
+  [4;36;1mRegistration Create (0.7ms)[0m   [0;1mINSERT INTO "registrations" ("special_instructions", "updated_at", "move_size_id", "move_to_city", "move_to_state", "home_phone", "first_name", "move_from_zip", "last_name", "move_date", "email", "created_at") VALUES('careful now', '2009-02-04 23:03:01', 3, 'san jose', 'CA', '1234567890', 'hot', 94044, 'rod', '2009-02-04', '32@me.com', '2009-02-04 23:03:01')[0m
+Sent mail to captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+
+Date: Wed, 4 Feb 2009 15:03:01 -0800
+From: paloozahub@gmail.com
+Reply-To: 32@me.com
+To: captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+Subject: New mover lead
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_498a1ea550826_6811ab801b0
+
+
+--mimepart_498a1ea550826_6811ab801b0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+## New Lead ##
+
+Contact Info
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Name:          	hot
+Phone:			1234567890
+Email:         	32@me.com
+
+Move Starts
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Date:			2009-02-04
+From:			94044
+Kind:			3
+
+Destination
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+City			san jose
+Instructions:	careful now
+
+--mimepart_498a1ea550826_6811ab801b0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<h1>New Lead</h1>
+
+<h2>Contact Info</h2>
+
+Name:          	hot<br />
+Phone:			1234567890<br />
+Email:         	32@me.com<br />
+
+<h2>Move Starts</h2>
+
+Date:			2009-02-04<br />
+From:			94044<br />
+Kind:			3<br />
+
+<h2>Destination</h2>
+
+City:			san jose<br />
+Instructions:	careful now<br />
+
+--mimepart_498a1ea550826_6811ab801b0--
+Redirected to #<Registration:0x2121004>
+Completed in 3579ms (DB: 1) | 302 Found [http://connect.local/registrations]
+
+
+Processing RegistrationsController#show (for 127.0.0.1 at 2009-02-04 15:03:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRegistration Load (0.3ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations"."id" = 1) [0m
+Rendering template within layouts/registrations
+Rendering registrations/show
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://connect.local/registrations/1]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-02-04 15:09:09) [GET]
+Redirected to http://connect.local/registrations/new
+  [4;36;1mRegistration Load (0.6ms)[0m   [0;1mSELECT * FROM "registrations" [0m
+
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:865:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:164:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:158:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/registrations_controller.rb:8:in `index'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `passenger_orig_perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `passenger_orig_perform_action'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/request_handler.rb:53:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/request_handler.rb:38:in `process_request'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_request_handler.rb:165:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/application_spawner.rb:321:in `start_request_handler'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/application_spawner.rb:282:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/utils.rb:163:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/utils.rb:161:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/utils.rb:161:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/application_spawner.rb:280:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/utils.rb:163:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/utils.rb:161:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/utils.rb:161:in `safe_fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/application_spawner.rb:279:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:135:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:112:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:112:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/application_spawner.rb:179:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/framework_spawner.rb:270:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/framework_spawner.rb:263:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/framework_spawner.rb:263:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:135:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:112:in `fork'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:112:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/railz/framework_spawner.rb:87:in `start'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/spawn_manager.rb:222:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/spawn_manager.rb:217:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/spawn_manager.rb:217:in `spawn_rails_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/spawn_manager.rb:126:in `spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/spawn_manager.rb:251:in `handle_spawn_application'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:317:in `__send__'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:317:in `main_loop'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/lib/passenger/abstract_server.rb:168:in `start_synchronously'
+    /Library/Ruby/Gems/1.8/gems/passenger-2.0.6/bin/passenger-spawn-server:46
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (206.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.2ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-02-04 15:09:38) [GET]
+Redirected to http://connect.local/registrations/new
+Completed in 2ms (DB: 0) | 302 Found [http://connect.local/registrations]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:09:38) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 87ms (View: 82, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:23:35) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 50ms (View: 43, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:25:43) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 27ms (View: 21, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-02-04 15:26:13) [POST]
+  Parameters: {"imgContinue.x"=>"40", "registration"=>{"special_instructions"=>"", "move_size_id"=>"5", "move_to_state"=>"Select State", "move_to_city"=>"", "move_date(1i)"=>"2009", "move_date(2i)"=>"2", "home_phone"=>"", "move_date(3i)"=>"4", "move_from_zip"=>"", "first_name"=>"", "last_name"=>"", "email"=>""}, "imgContinue.y"=>"9", "authenticity_token"=>"09ae7149f0305e1ba15699d0fe93f7a8343a9b80"}
+  [4;36;1mRegistration Create (0.5ms)[0m   [0;1mINSERT INTO "registrations" ("special_instructions", "updated_at", "move_size_id", "move_to_city", "move_to_state", "home_phone", "first_name", "move_from_zip", "last_name", "move_date", "email", "created_at") VALUES('', '2009-02-04 23:26:13', 5, '', 'Select State', '', '', NULL, '', '2009-02-04', '', '2009-02-04 23:26:13')[0m
+Sent mail to captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+
+Date: Wed, 4 Feb 2009 15:26:13 -0800
+From: paloozahub@gmail.com
+To: captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+Subject: New mover lead
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_498a24159740d_7491ab8018f
+
+
+--mimepart_498a24159740d_7491ab8018f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+## New Lead ##
+
+Contact Info
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Name:          	=
+
+Phone:			=
+
+Email:         	=
+
+
+Move Starts
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Date:			2009-02-04
+From:			=
+
+Kind:			5
+
+Destination
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+City			=
+
+Instructions:	=
+
+
+--mimepart_498a24159740d_7491ab8018f
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<h1>New Lead</h1>
+
+<h2>Contact Info</h2>
+
+Name:          	<br />
+Phone:			<br />
+Email:         	<br />
+
+<h2>Move Starts</h2>
+
+Date:			2009-02-04<br />
+From:			<br />
+Kind:			5<br />
+
+<h2>Destination</h2>
+
+City:			<br />
+Instructions:	<br />
+
+--mimepart_498a24159740d_7491ab8018f--
+Redirected to #<Registration:0x21d8074>
+Completed in 4786ms (DB: 0) | 302 Found [http://connect.local/registrations]
+
+
+Processing RegistrationsController#show (for 127.0.0.1 at 2009-02-04 15:26:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mRegistration Load (0.3ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations"."id" = 2) [0m
+Rendering template within layouts/registrations
+Rendering registrations/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://connect.local/registrations/2]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:27:38) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:27:58) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 192ms (View: 183, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-04 15:28:15) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 30ms (View: 21, DB: 0) | 200 OK [http://connect.local/registrations/new]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-02-04 17:04:09) [POST]
+  Parameters: {"imgContinue.x"=>"198", "registration"=>{"special_instructions"=>"504", "move_size_id"=>"6", "move_to_state"=>"CA", "move_to_city"=>"Pacifica", "move_date(1i)"=>"2009", "move_date(2i)"=>"2", "home_phone"=>"1234567890", "move_date(3i)"=>"4", "move_from_zip"=>"94044", "first_name"=>"carl", "last_name"=>"Tanner", "email"=>"123@wr.com"}, "imgContinue.y"=>"13", "authenticity_token"=>"09ae7149f0305e1ba15699d0fe93f7a8343a9b80"}
+  [4;36;1mRegistration Create (0.5ms)[0m   [0;1mINSERT INTO "registrations" ("special_instructions", "updated_at", "move_size_id", "move_to_city", "move_to_state", "home_phone", "first_name", "move_from_zip", "last_name", "move_date", "email", "created_at") VALUES('504', '2009-02-05 01:04:09', 6, 'Pacifica', 'CA', '1234567890', 'carl', 94044, 'Tanner', '2009-02-04', '123@wr.com', '2009-02-05 01:04:09')[0m
+Sent mail to captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+
+Date: Wed, 4 Feb 2009 17:04:09 -0800
+From: paloozahub@gmail.com
+Reply-To: 123@wr.com
+To: captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+Subject: New mover lead
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_498a3b09e97b7_a311ab801f4
+
+
+--mimepart_498a3b09e97b7_a311ab801f4
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+## New Lead ##
+
+Contact Info
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Name:          	carl
+Phone:			1234567890
+Email:         	123@wr.com
+
+Move Starts
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Date:			2009-02-04
+From:			94044
+Kind:			6
+
+Destination
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+City			Pacifica
+Instructions:	504
+
+--mimepart_498a3b09e97b7_a311ab801f4
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<h1>New Lead</h1>
+
+<h2>Contact Info</h2>
+
+Name:          	carl<br />
+Phone:			1234567890<br />
+Email:         	123@wr.com<br />
+
+<h2>Move Starts</h2>
+
+Date:			2009-02-04<br />
+From:			94044<br />
+Kind:			6<br />
+
+<h2>Destination</h2>
+
+City:			Pacifica<br />
+Instructions:	504<br />
+
+--mimepart_498a3b09e97b7_a311ab801f4--
+Redirected to #<Registration:0x2396910>
+Completed in 2478ms (DB: 0) | 302 Found [http://connect.local/registrations]
+
+
+Processing RegistrationsController#show (for 127.0.0.1 at 2009-02-04 17:04:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRegistration Load (0.3ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations"."id" = 3) [0m
+Rendering template within layouts/registrations
+Rendering registrations/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://connect.local/registrations/3]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2009-02-04 17:05:47) [POST]
+  Parameters: {"imgContinue.x"=>"95", "registration"=>{"special_instructions"=>"504", "move_size_id"=>"6", "move_to_state"=>"CA", "move_to_city"=>"Pacifica", "move_date(1i)"=>"2009", "move_date(2i)"=>"2", "home_phone"=>"1234567890", "move_date(3i)"=>"4", "move_from_zip"=>"94044", "first_name"=>"carl", "last_name"=>"Tanner", "email"=>"505@wr.com"}, "imgContinue.y"=>"17", "authenticity_token"=>"09ae7149f0305e1ba15699d0fe93f7a8343a9b80"}
+  [4;36;1mRegistration Create (0.5ms)[0m   [0;1mINSERT INTO "registrations" ("special_instructions", "updated_at", "move_size_id", "move_to_city", "move_to_state", "home_phone", "first_name", "move_from_zip", "last_name", "move_date", "email", "created_at") VALUES('504', '2009-02-05 01:05:47', 6, 'Pacifica', 'CA', '1234567890', 'carl', 94044, 'Tanner', '2009-02-04', '505@wr.com', '2009-02-05 01:05:47')[0m
+Sent mail to captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+
+Date: Wed, 4 Feb 2009 17:05:48 -0800
+From: paloozahub@gmail.com
+Reply-To: 505@wr.com
+To: captproton <8015031355@tmomail.net>, Carl Tanner <carl@betterbilling.net>
+Subject: New mover lead
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_498a3b6c2f55_a311ab804f3
+
+
+--mimepart_498a3b6c2f55_a311ab804f3
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+## New Lead ##
+
+Contact Info
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Name:          	carl
+Phone:			1234567890
+Email:         	505@wr.com
+
+Move Starts
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Date:			2009-02-04
+From:			94044
+Kind:			6
+
+Destination
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+City			Pacifica
+Instructions:	504
+
+--mimepart_498a3b6c2f55_a311ab804f3
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<h1>New Lead</h1>
+
+<h2>Contact Info</h2>
+
+Name:          	carl<br />
+Phone:			1234567890<br />
+Email:         	505@wr.com<br />
+
+<h2>Move Starts</h2>
+
+Date:			2009-02-04<br />
+From:			94044<br />
+Kind:			6<br />
+
+<h2>Destination</h2>
+
+City:			Pacifica<br />
+Instructions:	504<br />
+
+--mimepart_498a3b6c2f55_a311ab804f3--
+Redirected to #<Registration:0x22725e8>
+Completed in 2498ms (DB: 0) | 302 Found [http://connect.local/registrations]
+
+
+Processing RegistrationsController#show (for 127.0.0.1 at 2009-02-04 17:05:50) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mRegistration Load (0.3ms)[0m   [0mSELECT * FROM "registrations" WHERE ("registrations"."id" = 4) [0m
+Rendering template within layouts/registrations
+Rendering registrations/show
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://connect.local/registrations/4]
+
+
+Processing RegistrationsController#index (for 127.0.0.1 at 2009-02-25 11:22:50) [GET]
+Redirected to http://connect.local/registrations/new
+Completed in 3ms (DB: 0) | 302 Found [http://connect.local/registrations]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2009-02-25 11:22:50) [GET]
+Rendering template within layouts/registrations
+Rendering registrations/new
+Completed in 247ms (View: 239, DB: 0) | 200 OK [http://connect.local/registrations/new]

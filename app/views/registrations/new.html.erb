@@ -1,0 +1,166 @@
+		<table height="400" cellSpacing="0" cellPadding="3" width="100%" 
+			border="0">
+			<tr>
+				<td vAlign="top" align="left" height="1">
+					<table cellSpacing="0" cellPadding="10" width="100%" border="0">
+						<tr>
+							<td><IMG height="27" src="http://www.allmysons.com/saltlakecity/images/hdr_immediatehelp.gif" width="236" vspace="5"><br>
+								<table width="90%" border="0" cellspacing="0" cellpadding="1">
+									<tr>
+										<td align="left" valign="top"><strong>Last minute move? Need service fast? </strong>
+											<br>
+											With Smooth Mover, you can fill out this one simple form and one of our 
+											Certified Moving Consultants will contact you immediately to process your last 
+											minute move in just a few minutes.
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td id="form" vAlign="top" align="center">
+
+<% form_for(@registration) do |f| %>
+  <%= f.error_messages %>
+
+
+	<table height="100%" cellSpacing="0" cellPadding="2" width="100%" border="0">
+		<tr>
+			<td colSpan="2"></td>
+		<tr align="left">
+			<td vAlign="top" align="center" colSpan="2">
+				<table cellSpacing="1" cellPadding="1" width="400" border="0">
+					<tr vAlign="top" align="left">
+						<td noWrap><%= f.label :move_date %></td>
+						<td colSpan="3"><font class="Required">
+    <%= f.date_select :move_date %>
+	<span id="Requiredfieldvalidator2" style="color:Red;visibility:hidden;">*</span></font></td>
+											</tr>
+											<!--
+																							<tr align="left" valign="top">
+																								<td nowrap>Move Type:</td>
+																								<td colspan="3">
+																										</td>
+																							</tr>
+																							-->
+											<tr vAlign="top" align="left">
+												<td noWrap width="106"><%= f.label :first_name %></td>
+												<td width="138"><%= f.text_field :first_name,  :maxlength => "30" %><span id="Requiredfieldvalidator3" style="color:Red;visibility:hidden;">*</span></td>
+												<td noWrap width="106"><%= f.label :last_name %></td>
+												<td width="138"><%= f.text_field :last_name,  :maxlength => "30" %><span id="Requiredfieldvalidator3" style="color:Red;visibility:hidden;">*</span></td>
+											</tr>
+											<tr vAlign="top" align="left">
+												<td noWrap><%= f.label :home_phone %></td>
+												<td><%= f.text_field :home_phone %><span id="Requiredfieldvalidator6" style="color:Red;visibility:hidden;">*</span><span id="RegularExpressionValidator1" class="Required" style="color:Red;display:none;">Enter valid phone</span></td>
+												<td noWrap width="90"><%= f.label :email %>
+												</td>
+												<td width="142"><%= f.text_field :email %><span id="Requiredfieldvalidator7" style="color:Red;visibility:hidden;">*</span><span id="RegularExpressionValidator2" class="Required" style="color:Red;display:none;">Enter valid email address</span></td>
+												<!--<td nowrap>Office Phone</td>
+																								<td><input type="text" name="textfield"></td>-->
+											</tr>
+																					<tr vAlign="top" align="left">
+																						<td noWrap><%= f.label :move_size_id %></td>
+																						<td><select id="registration_move_size_id" name="registration[move_size_id]" >
+												<option value="Select Move Size">Select Move Size</option>
+												<option value="0">Unknown</option>
+												<option value="1">Apt 1 Bedroom</option>
+												<option value="2">Apt 2 Bedroom or more</option>
+												<option value="3">House 2 Bedroom</option>
+												<option value="4">House 3 Bedroom</option>
+												<option value="5">House 4 Bedroom or more</option>
+												<option value="6">Storage</option>
+												<option value="7">Small Office</option>
+												<option value="8">Large Office</option>
+												<option value="9">Other</option>
+												<option value="10">Townhouse</option>
+
+											</select><span id="Requiredfieldvalidator8" style="color:Red;visibility:hidden;">*</span></td>
+																						<td noWrap><%= f.label :move_from_zip %></td>
+																						<td><%= f.text_field :move_from_zip, :maxlength => 20, :size => 5 %><span id="Requiredfieldvalidator9" style="color:Red;visibility:hidden;">*</span></td>
+											</tr>
+																					<tr vAlign="top" align="left">
+																						<td noWrap><%= f.label :move_to_city %></td>
+																						<td><%= f.text_field :move_to_city, :maxlength => 20 %><span id="Requiredfieldvalidator11" style="color:Red;visibility:hidden;">*</span></td>
+																						<td noWrap><%= f.label :move_to_state %></td>
+																						<td><select id="registration_move_to_state" name="registration[move_to_state]">
+												<option selected="selected" value="Select State">Select State</option>
+												<option value="------------">------------</option>
+												<option value="AK">AK</option>
+												<option value="AZ">AZ</option>
+												<option value="AR">AR</option>
+												<option value="CA">CA</option>
+												<option value="CO">CO</option>
+												<option value="CT">CT</option>
+												<option value="DE">DE</option>
+												<option value="DC">DC</option>
+												<option value="FL">FL</option>
+												<option value="GA">GA</option>
+												<option value="HI">HI</option>
+												<option value="ID">ID</option>
+												<option value="IL">IL</option>
+												<option value="IN">IN</option>
+												<option value="IA">IA</option>
+												<option value="KS">KS</option>
+												<option value="KY">KY</option>
+												<option value="LA">LA</option>
+												<option value="ME">ME</option>
+												<option value="MD">MD</option>
+												<option value="MA">MA</option>
+												<option value="MI">MI</option>
+												<option value="MN">MN</option>
+												<option value="MS">MS</option>
+												<option value="MO">MO</option>
+												<option value="MT">MT</option>
+												<option value="NE">NE</option>
+												<option value="NV">NV</option>
+												<option value="NH">NH</option>
+												<option value="NJ">NJ</option>
+												<option value="NM">NM</option>
+												<option value="NY">NY</option>
+												<option value="NC">NC</option>
+												<option value="ND">ND</option>
+												<option value="OH">OH</option>
+												<option value="OK">OK</option>
+												<option value="OR">OR</option>
+												<option value="PA">PA</option>
+												<option value="RI">RI</option>
+												<option value="SC">SC</option>
+												<option value="SD">SD</option>
+												<option value="TN">TN</option>
+												<option value="TX">TX</option>
+												<option value="UT">UT</option>
+												<option value="VT">VT</option>
+												<option value="VA">VA</option>
+												<option value="WA">WA</option>
+												<option value="WV">WV</option>
+												<option value="WI">WI</option>
+												<option value="WY">WY</option>
+
+											</select><span id="Requiredfieldvalidator10" style="color:Red;visibility:hidden;">*</span></td>
+																					</tr>
+																					<tr vAlign="top" align="left">
+																						<td><%= f.label :special_instructions %></td>
+																						<td colSpan="3"><%= f.text_area :special_instructions, :rows => 3, :columns => 20, :style =>  "width:368px" %></td>
+																					</tr>
+																					<tr vAlign="top" align="left">
+																						<!--<td nowrap><input name="checkbox" type="checkbox" value="checkbox" checked style="BACKGROUND-COLOR:#d9d9e3">
+																							Call Now</td> -->
+																						<td align="center" colSpan="3"><input type="image" name="imgContinue" id="imgContinue" src="http://www.allmysons.com/saltlakecity/images/b_immediately.gif" style="border-width:0px;" /></td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+
+
+
+
+<% end %>
+
+					<!-- end form table --></td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>

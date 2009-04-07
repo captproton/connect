@@ -1,0 +1,52 @@
+<h1>Editing registration</h1>
+
+<% form_for(@registration) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :move_date %><br />
+    <%= f.date_select :move_date %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_area :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_area :last_name %>
+  </p>
+  <p>
+    <%= f.label :home_phone %><br />
+    <%= f.text_area :home_phone %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_area :email %>
+  </p>
+  <p>
+    <%= f.label :move_size_id %><br />
+    <%= f.text_field :move_size_id %>
+  </p>
+  <p>
+    <%= f.label :move_from_zip %><br />
+    <%= f.text_field :move_from_zip %>
+  </p>
+  <p>
+    <%= f.label :move_to_city %><br />
+    <%= f.text_area :move_to_city %>
+  </p>
+  <p>
+    <%= f.label :move_to_state %><br />
+    <%= f.text_area :move_to_state %>
+  </p>
+  <p>
+    <%= f.label :special_instructions %><br />
+    <%= f.text_area :special_instructions %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @registration %> |
+<%= link_to 'Back', registrations_path %>

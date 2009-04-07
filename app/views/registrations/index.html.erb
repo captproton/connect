@@ -1,0 +1,38 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <tr>
+    <th>Move date</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Home phone</th>
+    <th>Email</th>
+    <th>Move size</th>
+    <th>Move from zip</th>
+    <th>Move to city</th>
+    <th>Move to state</th>
+    <th>Special instructions</th>
+  </tr>
+
+<% for registration in @registrations %>
+  <tr>
+    <td><%=h registration.move_date %></td>
+    <td><%=h registration.first_name %></td>
+    <td><%=h registration.last_name %></td>
+    <td><%=h registration.home_phone %></td>
+    <td><%=h registration.email %></td>
+    <td><%=h registration.move_size_id %></td>
+    <td><%=h registration.move_from_zip %></td>
+    <td><%=h registration.move_to_city %></td>
+    <td><%=h registration.move_to_state %></td>
+    <td><%=h registration.special_instructions %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New registration', new_registration_path %>

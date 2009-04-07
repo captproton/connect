@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  move_date: 2009-02-04
+  first_name: MyText
+  last_name: MyText
+  home_phone: MyText
+  email: MyText
+  move_size_id: 1
+  move_from_zip: 1
+  move_to_city: MyText
+  move_to_state: MyText
+  special_instructions: MyText
+
+two:
+  move_date: 2009-02-04
+  first_name: MyText
+  last_name: MyText
+  home_phone: MyText
+  email: MyText
+  move_size_id: 1
+  move_from_zip: 1
+  move_to_city: MyText
+  move_to_state: MyText
+  special_instructions: MyText

@@ -1,0 +1,53 @@
+<p>
+  <b>Move date:</b>
+  <%=h @registration.move_date %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @registration.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @registration.last_name %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%=h @registration.home_phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @registration.email %>
+</p>
+
+<p>
+  <b>Move size:</b>
+  <%=h @registration.move_size_id %>
+</p>
+
+<p>
+  <b>Move from zip:</b>
+  <%=h @registration.move_from_zip %>
+</p>
+
+<p>
+  <b>Move to city:</b>
+  <%=h @registration.move_to_city %>
+</p>
+
+<p>
+  <b>Move to state:</b>
+  <%=h @registration.move_to_state %>
+</p>
+
+<p>
+  <b>Special instructions:</b>
+  <%=h @registration.special_instructions %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', registrations_path %>

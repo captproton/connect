@@ -1,0 +1,18 @@
+login: &login
+  adapter: mysql
+  host: localhost
+  username: carlbtan_carlb
+  password: melorbode
+
+development:
+  database: connect_paloozahub_development
+  <<: *login
+
+test:
+  database: connect_paloozahub_test
+  <<: *login
+
+production:
+  database: connect_paloozahub_production
+  <<: *login
+
