@@ -2,17 +2,17 @@ login: &login
   adapter: mysql
   host: localhost
   username: carlbtan_carlb
-  password: melorbode
+  password: 123456
 
 development:
-  database: connect_paloozahub_development
+  database: connect_development
   <<: *login
 
 test:
-  database: connect_paloozahub_test
+  database: connect_test
   <<: *login
 
 production:
-  database: connect_paloozahub_production
+  database: connect_production
   <<: *login
 
