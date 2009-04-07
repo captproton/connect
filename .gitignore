@@ -3,7 +3,7 @@ tmp/**/*
 log/*.log
 config/amazon_s3.yml
 config/database.yml
-config/initializers/smtp_gmail.rb
+## config/initializers/smtp_gmail.rb
 vendor/rails
 db/*.sqlite
 db/*.sqlite2
